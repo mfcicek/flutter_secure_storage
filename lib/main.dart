@@ -25,7 +25,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   FlutterSecureStorage storage;
   String value;
-
   String _sampleToken =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkZhdGloIiwiaWF0IjoxNTE2MjM5MDIyfQ.oUHocAHQ1NjVsuzPphjzuRpmDe0EyMLczYO7IgXFo1w";
 
@@ -60,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Fluttertoast.showToast(msg: "Token yok");
     } else {
       await storage.delete(key: SECURE_NOTE_KEY);
+
       Fluttertoast.showToast(msg: "Token başarıyla silindi");
     }
   }
